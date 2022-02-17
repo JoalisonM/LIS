@@ -1,130 +1,181 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Declarando tag do HTML 5 -->
 <html>
+<!-- Abrindo tag do html -->
 
 <head>
+  <!-- abertura da tag head, a tag head tem informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos -->
   <meta charset="UTF-8">
-  <title>Cardápio</title>
+  <!-- A tag <meta> define metadados sobre um documento HTML, o charset Especifica a codificação de caracteres para o documento -->
+  <title>Cardápio</title> <!-- Declarando o título da página a partir da tag title -->
 
   <!-- Bootstrap - CSS -->
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- tag link que contém todo o css do bootstrap -->
 
-</head>
+</head> <!-- Fechamento da tag head -->
 
 <body>
+  <!-- Abertura da tag body, ela contém todo conteúdo de um documento HTML -->
   <header>
+    <!-- Abertura da tga header, ela é uma tag semântica para organizar a página, usada para ficar normalmente com o menu -->
     <!-- Toolbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- abertura da tag nav, elemento semântico utilizado para fazer barras de navegação, ela é o menu do bootstrap 5 -->
       <div class="container-fluid">
+        <!-- abertura da tag div, que é o container do menu -->
         <a class="navbar-brand" href="#">
+          <!-- abertura da tag a, ela define um hiperlink, que é usado para vincular uma página a outra, já a classe defina o texto como a logo da página -->
           Coffee
-          <small>Arábica</small>
-        </a>
+          <!-- Texto que  vai ficar com o link e ao ser clicado vai mandar para uma página, site externo e etc -->
+          <small>Arábica</small> <!-- a tag small define um texto pequeno -->
+        </a> <!-- Fechamento da tag a -->
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- botão que vai ser usado para o menu mobile, ele vai virar um hamburguer quando a tela tiver em certo tamanho -->
           <span class="navbar-toggler-icon"></span>
-        </button>
+          <!--A tag span é um container embutido usado para marcar uma parte de um texto ou uma parte de um documento. -->
+        </button> <!-- fechamento da tag button -->
 
         <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- div que vai ficar com os itens do menu -->
           <ul class="navbar-nav">
+            <!-- abertura da tag ul, que cria uma lista não ordenada, essa lista vai ser as opções do menu  -->
             <li class="nav-item">
+              <!-- abertura da tag li, que é um item da lista não ordenada  -->
               <a class="nav-link" href="./index.html">Home</a>
-            </li>
+              <!-- ao ser clicado vai direcionar o usuário para outra página, ou uma seção expecifica da página -->
+            </li> <!-- fechamento da tag li  -->
             <li class="nav-item">
+              <!-- abertura da tag li, que é um item da lista não ordenada  -->
               <a class="nav-link active" aria-current="page" href="#">Cardápio</a>
-            </li>
+              <!-- ao ser clicado vai direcionar o usuário para outra página, ou uma seção expecifica da página -->
+            </li> <!-- fechamento da tag li  -->
             <li class="nav-item">
+              <!-- abertura da tag li, que é um item da lista não ordenada  -->
               <a class="nav-link" href="#">Sobre</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+              <!-- ao ser clicado vai direcionar o usuário para outra página, ou uma seção expecifica da página -->
+            </li> <!-- fechamento da tag li  -->
+          </ul> <!-- Fechamento da tag ul -->
+        </div> <!-- Fechamento da tag div -->
+      </div> <!-- Fechamento da tag div -->
+    </nav> <!-- Fechamento da tag nav -->
 
-  </header>
+  </header> <!-- Fechamento da tag header -->
   <main>
+    <!-- A tag <main> especifica o conteúdo principal de um documento -->
     <section class="my-3">
+      <!-- A tag <section> define uma seção em um documento -->
 
       <!-- Grid -->
       <div class="container">
+        <!-- -->
 
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <!-- Botão que abre o modal -->
           +
-        </button>
+          <!-- Texto do botão -->
+        </button> <!-- Fechamento da tag button -->
 
         <!-- Modal -->
-        <div class="modal fade" data-bs-keyboard="false" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" data-bs-keyboard="false" id="exampleModal" tabindex="-1"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!---->
+          <!-- modal do bootstrap 5 -->
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Adicionar Item</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
+              </div> <!-- Fechamento da tag div -->
               <div class="modal-body">
+                <!-- corpo do modal-->
 
-                <h1>Conteúdo do modal</h1>
+                <h1>Conteúdo do modal</h1> <!-- título do modal -->
 
                 <!-- Formulário -->
                 <form id="foodForm">
+                  <!-- formulário que vai enviar os dados e vão ser guardados no localStorage  -->
                   <div class="mb-3">
+                    <!-- estiliza os elementos de dentro -->
                     <!-- Nome -->
                     <label for="nome" class="form-label">Nome</label>
+                    <!-- título do input, importante o uso para acessibilidade, os leitores de tela os lêem-->
                     <input type="text" name="nome" id="nome" class="form-control">
+                    <!-- input de texto que vai ficar com o nome do produto do cardapio -->
                     <div id="nomeHelp" class="form-text">Adicione o nome do Alimento.</div>
-                  </div>
+                    <!-- texto informativo para que preencha o input acima dele-->
+                  </div> <!-- Fechamento da tag div -->
 
                   <!-- Descrição -->
                   <div class="mb-3">
+                    <!-- estiliza os elementos de dentro -->
                     <label for="descricao" class="form-label">Descrição</label>
+                    <!-- título do input, importante o uso para acessibilidade, os leitores de tela os lêem-->
                     <input type="text" name="descricao" id="descricao" class="form-control">
-                  </div>
+                    <!-- input de texto que vai ficar com a descrição -->
+                  </div> <!-- Fechamento da tag div -->
 
                   <!-- Preço -->
                   <div class="mb-3">
+                    <!-- estiliza os elementos de dentro -->
                     <label for="preco" class="form-label">Preço</label>
+                    <!-- título do input, importante o uso para acessibilidade, os leitores de tela os lêem-->
                     <input type="text" name="preco" id="preco" class="form-control">
-                  </div>
+                    <!-- input de texto que vai ficar com ao preço -->
+                  </div> <!-- Fechamento da tag div -->
 
                   <!-- Imagem -->
                   <div class="mb-3">
+                    <!-- estiliza os elementos de dentro -->
                     <label for="imagem" class="form-label">Imagem</label>
+                    <!-- título do input, importante o uso para acessibilidade, os leitores de tela os lêem-->
                     <input type="text" name="imagem" id="imagem" class="form-control">
-                  </div>
+                    <!-- input de texto que vai ficar com a imagem -->
+                  </div> <!-- Fechamento da tag div -->
 
                   <div class="modal-footer">
+                    <!-- vai ficar com os botões do formulário -->
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <!-- Botão que fecha o modal-->
 
                     <!-- <input type="submit" value="Adicionar"> -->
                     <button type="submit" class="btn btn-primary" id="adicionarFoodButton">
+                      <!-- Botão que envia os dados do formulário-->
                       Adicionar
-                    </button>
-                  </div>
-                </form>
+                      <!-- texto do botão-->
+                    </button> <!-- Fechamento da tag button-->
+                  </div> <!-- Fechamento da tag div -->
+                </form> <!-- Fechamento da tag form -->
 
-              </div>
+              </div> <!-- Fechamento da tag div -->
 
-            </div>
-          </div>
-        </div>
+            </div> <!-- Fechamento da tag div -->
+          </div> <!-- Fechamento da tag div -->
+        </div> <!-- Fechamento da tag div -->
 
         <!-- Linha -->
         <div id="itens-cardapio" class="row">
+          <!-- os cards do carapio irão entrar nessa div -->
 
           <!-- Colunas-->
 
           <!-- beforeend -->
-        </div>
+        </div> <!-- Fechamento da tag div -->
 
-    </section>
+    </section> <!-- Fechamento da tag section -->
 
-  </main>
-  <footer></footer>
+  </main> <!-- Fechamaneto da tag main -->
+  <footer></footer> <!-- Tag footer, sem conteúdo nenhum -->
 
   <!-- Cardápio -->
   <script src="./js/cardapio.js" type="module"></script>
+  <!-- tag que traz o script para que ele funcione sobre os elementos da página e posso ser usada suas funções -->
 
   <!-- Bootstrap - Js -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  <!-- Tag script, ele vai conter todo o javascript do bootstrap -->
+</body> <!-- Fechamento da tag body -->
 
-</html>
+</html> <!-- Fechando tag do html -->

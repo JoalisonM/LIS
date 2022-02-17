@@ -1,128 +1,190 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Declarando tag do HTML 5 -->
 <html>
+<!-- Abrindo tag do html -->
 
 <head>
+  <!-- abertura da tag head, a tag head tem informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos -->
 
   <meta charset="UTF-8">
-  <title>Document</title>
+  <!-- A tag <meta> define metadados sobre um documento HTML, o charset Especifica a codificação de caracteres para o documento -->
+  <title>Document</title> <!-- Declarando o título da página a partir da tag title -->
 
   <!-- Bootstrap - CSS -->
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- tag link que contém todo o css do bootstrap -->
 
   <!-- Estilo da aplicação -->
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index.css"> <!-- tag link que contém o css feito pelo programador  -->
 
 
-</head>
+</head> <!-- Fechamento da tag head -->
 
 <body>
+  <!-- Abertura da tag body, ela contém todo conteúdo de um documento HTML -->
 
   <header>
+    <!-- Abertura da tga header, ela é uma tag semântica para organizar a página, usada para ficar normalmente com o menu -->
     <!-- Toolbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          Coffee
-          <small>Arábica</small>
-        </a>
+      <!-- abertura da tag nav, elemento semântico utilizado para fazer barras de navegação, ela é o menu do bootstrap 5 -->
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="container-fluid">
+        <!-- abertura da tag div, que é o container do menu -->
+        <a class="navbar-brand" href="#">
+          <!-- abertura da tag a, ela define um hiperlink, que é usado para vincular uma página a outra, já a classe defina o texto como a logo da página -->
+          Coffee
+          <!-- Texto que  vai ficar com o link e ao ser clicado vai mandar para uma página, site externo e etc -->
+          <small>Arábica</small> <!-- a tag small define um texto pequeno -->
+        </a> <!-- Fechamento da tag a -->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- botão que vai ser usado para o menu mobile, ele vai virar um hamburguer quando a tela tiver em certo tamanho -->
           <span class="navbar-toggler-icon"></span>
-        </button>
+          <!--A tag span é um container embutido usado para marcar uma parte de um texto ou uma parte de um documento. -->
+        </button> <!-- fechamento da tag button -->
 
         <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- div que vai ficar com os itens do menu -->
           <ul class="navbar-nav">
+            <!-- abertura da tag ul, que cria uma lista não ordenada, essa lista vai ser as opções do menu  -->
             <li class="nav-item">
+              <!-- abertura da tag li, que é um item da lista não ordenada  -->
               <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
+              <!-- ao ser clicado vai direcionar o usuário para outra página, ou uma seção expecifica da página -->
+
+            </li> <!-- fechamento da tag li  -->
             <li class="nav-item">
+              <!-- abertura da tag li, que é um item da lista não ordenada  -->
               <a class="nav-link" href="./cardapio.html">Cardápio</a>
-            </li>
+              <!-- ao ser clicado vai direcionar o usuário para outra página, ou uma seção expecifica da página -->
+            </li> <!-- fechamento da tag li  -->
             <li class="nav-item">
+              <!-- abertura da tag li, que é um item da lista não ordenada  -->
               <a class="nav-link" href="#">Sobre</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+              <!-- ao ser clicado vai direcionar o usuário para outra página, ou uma seção expecifica da página -->
+            </li> <!-- fechamento da tag li  -->
+          </ul> <!-- Fechamento da tag ul -->
+        </div> <!-- Fechamento da tag div -->
+      </div> <!-- Fechamento da tag div -->
+    </nav> <!-- Fechamento da tag nav -->
+  </header> <!-- Fechamento da tag header -->
 
   <main>
+    <!-- A tag <main> especifica o conteúdo principal de um documento -->
     <section>
+      <!-- A tag <section> define uma seção em um documento, ela vai ser responsável pelo carrosel -->
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <!-- div que vai ser responsável pela criação do carrosel do bootstrap -->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+          <!-- div responsável por ficar com os indicadores das iamgens do carrosel -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <!-- ao clicar no botão vai para a primeira imagem do carrosel -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button> <!-- ao clicar no botão vai para a segunda imagem do carrosel -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button> <!-- ao clicar no botão vai para a terceira imagem do carrosel -->
+        </div> <!-- Fechamento da tag div -->
         <div class="carousel-inner">
+          <!-- Container que fica com as imagens -->
           <div class="carousel-item active">
+            <!-- Item ativo que inicia o carrosel -->
 
-            <img src="https://images.unsplash.com/photo-1609593147714-46c546d38137?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80" class="d-block w-100" alt="...">
+            <img
+              src="https://images.unsplash.com/photo-1609593147714-46c546d38137?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80"
+              class="d-block w-100" alt="..."> <!-- primeira imagem do carrosel -->
 
             <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
+              <!-- Responsável pela legenda que fica na imagem -->
+              <h5>First slide label</h5> <!-- Título da legenda na imagem 1 -->
               <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
+              <!-- parágrafo que fica na imagem 1 -->
+            </div> <!-- Fechamento da tag div -->
+          </div> <!-- Fechamento da tag div -->
           <div class="carousel-item">
+            <!-- segundo Item do carrosel -->
 
-            <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
+            <img
+              src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              class="d-block w-100" alt="..."> <!-- segunda imagem do carrosel -->
 
             <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
+              <!-- Responsável pela legenda que fica na imagem -->
+              <h5>Second slide label</h5> <!-- Título da legenda na imagem 2 -->
               <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
+              <!-- parágrafo que fica na imagem 2 -->
+            </div> <!-- Fechamento da tag div -->
+          </div> <!-- Fechamento da tag div -->
 
           <div class="carousel-item">
+            <!-- terceiro Item do carrosel -->
 
-            <img src="https://images.unsplash.com/photo-1581068106017-2349c727e298?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" class="d-block w-100" alt="...">
+            <img
+              src="https://images.unsplash.com/photo-1581068106017-2349c727e298?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+              class="d-block w-100" alt="..."> <!-- terceira imagem do carrosel -->
 
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
+              <!-- Responsável pela legenda que fica na imagem -->
+              <h5>Third slide label</h5> <!-- Título da legenda na imagem 3 -->
               <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
+              <!-- parágrafo que fica na imagem 3 -->
+            </div> <!-- Fechamento da tag div -->
+          </div> <!-- Fechamento da tag div -->
 
           <div class="carousel-item">
+            <!-- quarto Item do carrosel -->
 
-            <img src="https://images.unsplash.com/photo-1507915135761-41a0a222c709?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" class="d-block w-100" alt="...">
+            <img
+              src="https://images.unsplash.com/photo-1507915135761-41a0a222c709?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+              class="d-block w-100" alt="..."> <!-- quarta imagem do carrosel -->
 
             <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
+              <!-- Responsável pela legenda que fica na imagem -->
+              <h5>Third slide label</h5> <!-- Título da legenda na imagem 4 -->
               <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+              <!-- parágrafo que fica na imagem 4 -->
+            </div> <!-- Fechamento da tag div -->
+          </div> <!-- Fechamento da tag div -->
+        </div> <!-- Fechamento da tag div -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <!-- botão que leva a imagem anterior do carrosel -->
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!-- ícone da seta pra esquerda  -->
+          <span class="visually-hidden">Previous</span> <!-- texto ocultado que serve para acessibilidade -->
+        </button> <!-- Fechamento da tag button -->
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <!-- botão que leva a próxima imagem do carrosel -->
+          <span class="carousel-control-next-icon" aria-hidden="true"></span> <!-- ícone da seta pra direita  -->
+          <span class="visually-hidden">Next</span> <!-- texto ocultado que serve para acessibilidade -->
+        </button> <!-- Fechamento da tag button -->
+      </div> <!-- Fechamento da tag div -->
 
-    </section>
+    </section> <!-- Fechamento da tag section -->
 
     <section>
-      <h1>Minha aplicação com JS!</h1>
+      <!-- A tag <section> define uma seção em um documento -->
+      <h1>Minha aplicação com JS!</h1> <!-- Título da seção -->
 
-      <a href="semana3_atividade1.html">Semana 3</a>
+      <a href="semana3_atividade1.html">Semana 3</a> <!-- link que leva pro arquivo semana3_atividade1.html -->
 
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A voluptate vero voluptas quo ipsum alias repellat quibusdam ipsam asperiores laboriosam veritatis earum porro, provident sequi aspernatur nisi eius, iste odio.</p>
-    </section>
+      <p>
+        <!-- Parágrafo com lorem -->
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A voluptate vero voluptas quo ipsum alias repellat
+        quibusdam ipsam asperiores laboriosam veritatis earum porro, provident sequi aspernatur nisi eius, iste odio.
+      </p> <!-- Fechamento da tag p -->
+    </section> <!-- Fechamento da tag section -->
 
-  </main>
+  </main> <!-- Fechamaneto da tag main -->
 
-  <footer></footer>
+  <footer></footer> <!-- Tag footer, sem conteúdo nenhum -->
 
 
   <!-- Bootstrap - Js -->
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Tag script, ele vai conter todo o javascript do bootstrap -->
 
-</body>
+</body> <!-- Fechamento da tag body -->
 
-</html>
+</html> <!-- Fechando tag do html -->
